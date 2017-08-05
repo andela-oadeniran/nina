@@ -5,7 +5,7 @@ RSpec.describe Nina do
     expect(Nina::VERSION).not_to be nil
   end
 
-  it "does something useful" do
-    expect(false).to eq(true)
+  it "responds to a call method" do
+    expect(Nina::Application.new).to respond_to(:call).with(1).argument
   end
 end
